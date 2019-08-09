@@ -1,0 +1,21 @@
+.demo1{
+    background-color: greenyellow;
+    margin: 100px auto;
+    width:300px;
+    height:25px;
+    line-height: 25px;
+    padding:10px;
+    border-radius: 10px;
+    color: aqua;
+    position: relative;
+}
+.demo1::before{
+    content: "";
+    border-left: 0px solid #f66;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #f66;
+    position: absolute;
+    right: 20px;
+    top:14px;
+}

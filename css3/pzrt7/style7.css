@@ -1,0 +1,16 @@
+.diamod{
+    width:200px;
+    height:200px;
+    margin: 200px auto;
+    background-color: red;
+    /* 旋转 */
+    transform: rotate(45deg);
+}
+.dia{
+    width:200px;
+    height:100px;
+    margin: 0px auto;
+    background-color: green;
+    /* 倾斜 */
+    transform: skew(-45deg);
+}

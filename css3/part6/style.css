@@ -1,0 +1,9 @@
+.sanjiaoxing{
+    border-top:200px solid transparent;
+    border-right:200px solid #fccc ;
+    border-bottom:200px solid transparent;
+    border-left:0px solid rgb(135, 102, 255) ;
+    width:0px;
+    height:0px;
+    margin: 100px auto;
+}

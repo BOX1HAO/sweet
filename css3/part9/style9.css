@@ -1,0 +1,28 @@
+#demo9{
+
+    width:100px;
+    height:90px;
+    margin: 100px auto;
+    position: relative;
+}
+#demo9::before{
+    content: '';
+    position: absolute;
+    width:50px;
+    height:80px;
+    background-color: rgb(68, 0, 255);
+    border-radius: 50px 50px 0px 0px;
+    transform-origin: 0 100%;
+    transform: rotate(-45deg);
+    left: 50px;
+}
+#demo9::after{
+    content: '';
+    position: absolute;
+    width:50px;
+    height:80px;
+    background-color: rgb(68, 0, 255);
+    border-radius: 50px 50px 0px 0px;
+    transform-origin: 100% 100%;
+    transform: rotate(45deg);
+}

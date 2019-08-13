@@ -1,0 +1,32 @@
+#tai{
+    width: 150px;
+    height:300px;
+    margin: 100px auto;
+    border-radius:50%;
+    background-color:blue;
+    border-left:150px solid blueviolet;
+    position: relative;
+}
+#tai::before{
+    content: "";
+    position: absolute;
+    width:0px;
+    height:0px;
+    padding: 25px;
+    border-radius: 50%;
+    border: 50px solid blueviolet;
+    background-color: blue;
+    left: -75px;
+}
+#tai::after{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    padding: 25px;
+    border-radius: 50%;
+    border: 50px solid blue;
+    background-color: blueviolet;
+    top:150px;
+    left: -75px;
+}

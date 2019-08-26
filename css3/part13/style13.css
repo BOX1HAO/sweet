@@ -1,0 +1,37 @@
+body{
+    background-color: cornsilk;
+}
+#main{
+    margin: 100px auto;
+    width:800px;
+    clear: both;
+}
+#main li{
+    background-color: white;
+    list-style: none;
+    width:240px;
+    padding: 1px;
+    border: 1px solid rgba(155, 140, 140, 0);
+    cursor: pointer;
+    float: left;
+    margin: 5px;
+}
+#main li:hover{
+    border: 1px solid rgba(255,0,0,1);
+}
+#main li:hover .img img{
+    opacity: 0.7;
+}
+.img img{
+    transition:all 1s;
+    width:240px;
+}
+.title{
+    margin: 10px;
+    color: red;
+    height: 35px;
+}
+.price{
+    margin: 10px;
+    color: yellowgreen;
+}

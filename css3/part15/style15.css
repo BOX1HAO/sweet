@@ -1,0 +1,33 @@
+.main{
+    width: 280px;
+    height: 320px;
+    border: 1px solid gainsboro;
+    margin: 50px auto;
+    font-family: 'Microsoft YaHei';
+    cursor: pointer;
+}
+.m_title{
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px 10px 10px 10px;
+}
+.m_content{
+    color: aqua;
+    padding:0px 10px 10px 10px;
+}
+.m_img{
+    text-align: right;
+    position: relative;
+}
+.m_img img{
+    position: absolute;
+    width: 250px;
+    height:220px;
+    top:0px;
+    right: 0px;
+    transition: all .2s ;
+}
+.main:hover img{
+    right:10px;
+}

@@ -3,7 +3,16 @@
     height:100px;
     background-color: red;
     position: fixed;
-    animation: mymove 6s infinite;
+    animation-name: mymove;
+    /* 多长时间完成动画 */
+    animation-duration: 6s;
+    animation-timing-function: ease;
+    /* 延迟多长时间执行 */
+    animation-delay: 1s;
+    /* 循环次数 */
+    animation-iteration-count: infinite;
+    /* 动画方向 */
+    animation-direction: alternate;
 }
 @keyframes mymove{
     0%{ top:0; left:20%;}

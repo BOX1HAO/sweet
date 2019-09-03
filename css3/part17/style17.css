@@ -1,0 +1,28 @@
+.main{
+    margin: 50px auto;
+    width: 60px;
+    height: 70px;
+}
+.samll{
+    width:5px;
+    height:100%;
+    background-color: green;
+    display: inline-block;
+    animation: mymove  1.4s infinite;
+}
+.samll:nth-child(2){
+    animation-delay: -1.2s;
+}
+.samll:nth-child(3){
+    animation-delay: -1.0s;
+}
+.samll:nth-child(4){
+    animation-delay: -0.8s;
+}
+.samll:nth-child(5){
+    animation-delay: -0.6s;
+}
+@keyframes mymove{
+    0%,100%{ transform: scaleY(0.5);}
+    60%,80%{ transform: scaleY(1);}
+}

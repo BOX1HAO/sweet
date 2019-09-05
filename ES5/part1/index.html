@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Json字符串与js对象的转换</title>
+</head>
+<body>
+    <script>
+    //     new Function()方法
+    // var str ='{"name":"猴子"}';
+    // var fun =new Function("return"+str);
+    // var result =fun();
+    //      parse()方法
+    // var str ='{"name":"猴子"}';
+    // var obj =JSON.parse(str);
+    // js对象转换成json字符串
+    var obj={
+        "name":"xiaoli",
+        "sex":"nan",
+        "age":"13"
+    }
+    var str=JSON.stringify(obj);
+    </script>
+</body>
+</html>

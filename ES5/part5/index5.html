@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>foreach方法</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var aj = ["1","2","3","1"];
+        var ak = aj.forEach(function(value,index,aj){
+            console.log(this,arguments);
+        })   
+    // 构造函数  
+    function forEach(aj,fn){
+        for(var i=0;i<aj.length;i++){
+            fn(aj[i],i,aj);
+        }
+    }
+    var al = forEach(aj,function(value,index,aj){
+        console.log(this,arguments);
+    })
+    // 兼容IE8
+    if(!Array.prototype.forEach){
+        Array.prototype.forEach=function(fn){
+            for(var i=0;i<this.length;i++){
+                fn(this[i],i,this);
+            }
+        }
+    }
+    var akl = aj.forEach(function(value,index,aj){
+            console.log(this,arguments);})
+    </script>
+</body>
+</html>

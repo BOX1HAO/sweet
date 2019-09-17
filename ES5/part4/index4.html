@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>获取索引值</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var aj = ["1","2","3","1"];
+        // 第一种方法   indexOf
+        var ak =aj.indexOf("1");
+        var al =aj.lastIndexOf("1");
+
+        // 第二种方法   构造函数
+        function indexOf(aj,item){
+            for (var i=0;i<aj.length;i++){
+                if(aj[i]===item){
+                    return i;
+                }
+                return -1;
+            }
+        }
+        var ap =indexOf(aj,"1");
+
+        // 兼容IE8   indexOf
+        if(!Array.prototype.indexOf){
+           Array.prototype.indexOf = function(item){
+             for(var i=0;i<this.length;i++){
+                if(aj[i]===item){
+                    return i;
+                }
+                return -1;
+             }
+           }
+        }
+        var aa = aj.indexOf("1");
+
+        // 兼容IE8   lastIndexOf
+        if(!Array.prototype.lastIndexOf){
+            Array.prototype.lastIndexOf = function(item){
+                for(var i=this.length;i>=0;i--){
+                    if(aj[i]===item){
+                        return i;
+                    }
+                    return -1;
+                }
+            }
+        }
+        var ab = aj.lastIndexOf("5");
+    </script>
+</body>
+</html>

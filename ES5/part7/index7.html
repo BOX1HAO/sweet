@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>断言方法</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var arr = ["猪","牛","马","羊"]
+        // var re = arr.some(function(value,index,arr){
+        //     console.log(this,arguments);
+        //     return value[0]=="鸡";
+        // })
+        //   some方法   判断数组中有成员满足条件
+        function some(arr,fn){
+            for(var i=0;i<arr.length;i++){
+                if(fn(arr[i],i,arr)){
+                    return true;
+                }
+            }
+            return false;
+        }
+       
+       if(!Array.prototype.some){
+           Array.prototype.some = function(fn){
+               for(var i=0;i<this.length;i++){
+                   if(fn(arr[i],i,arr)){
+                       return true;
+                   }
+               }
+               return false;
+           }
+       }
+
+       var re = some(arr,function(value,index,arr){
+            console.log(this,arguments);
+            return value[0]=="马";
+        })
+
+        // every方法  判断数组中成员都满足条件
+
+        // var res = arr.every(function(value,index,arr){
+        //     console.log(this,arguments);
+        //     return value.length == 2;
+        // })
+        function every(arr,fn){
+            for(var i=0;i<arr.length;i++){
+                if(fn(arr[i],i,arr)){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        if(!Array.prototype.every){
+            Array.prototype.every = function(fn){
+            for(var i=0;i<this.length;i++){
+                if(fn(arr[i],i,arr)){
+                    return true;
+                }
+            }
+            return false;
+            }
+        }
+         
+        var res = every(arr,function(value,index,arr){
+            return value.length==1;
+        })
+        console.log(res);
+    </script>
+</body>
+</html>

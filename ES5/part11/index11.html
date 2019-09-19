@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数绑定</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // call方法：执行函数，并改变this指向，第一个参数是改变指向的参数，从第二个参数开始便是原函数参数
+        // apply方法：执行函数，并改变this指向，第一个参数就是改变指向的参数，第二个参数是一个数组，数组成员就是原函数参数
+        // bind方法：执行函数，并改变函数指向，第一个参数是改变指向的参数，从第二个参数开始便是原函数参数
+
+
+        // 区别：
+        // call和apply 调用即执行
+        // bind调用后返回一个新的方法
+        function fun(){
+            console.log(this,arguments);
+        }
+        // 函数自执行
+        // fun();
+
+        // call方法
+        fun.call(document,1,2);
+
+        // apply方法
+        fun.apply(document.body,[3,4]);
+
+        // bind方法
+        var re =fun.bind(document.body,5,6);
+        re();
+    </script>
+</body>
+</html>

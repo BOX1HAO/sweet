@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>filter</title>
+</head>
+<body>
+    <script type="text/javascript">
+    // filter 数组过滤
+        var arr = ["朱牛牛","王浩浩","马杜","张旺"]
+    // 寻找第二字符和第三字符相等的成员
+    // var re = arr.filter(function(value,index,arr){
+    //     console.log(this,arguments);
+    //     return value[1]==value[2];
+    // })
+
+    function filter(arr,fn){
+        var res = []
+        for(var i=0;i<arr.length;i++){
+            if(fn(arr[i],i,arr)){
+                res.push(arr[i]);
+            }
+        }
+        return res;
+    }
+    
+
+    if(!Array.prototype.filter){
+        Array.prototype.filter = function(fn){
+            var res = []
+        for(var i=0;i<arr.length;i++){
+            if(fn(arr[i],i,arr)){
+                res.push(arr[i]);
+            }
+        }
+        return res;
+    }
+    }
+    
+    var res = filter(arr,function(value,index,arr){
+        return value[1]==value[2]
+    })
+    </script>
+</body>
+</html>

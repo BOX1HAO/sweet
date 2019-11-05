@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>
+    <style>
+            html,
+            body,
+            #container {
+                width: 100%;
+                height: 100%;
+            }
+    </style>
+</head>
+<body>
+        <div id="container"></div>
+        <div class="input-card" style="width: auto;">
+            <div class="input-item">
+                <button id="show-obj3d-btn" onclick="showLayer()" class="btn">显示卫星图</button>
+                <button id="hide-obj3d-btn" onclick="hideLayer()" class="btn">隐藏卫星图</button>
+            </div>
+        </div>
+        <script src="https://cache.amap.com/lbs/static/es5.min.js"></script>
+        <script src="https://webapi.amap.com/maps?v=1.4.15&key=b54858dbf61452e7795cd69cf3201594&plugin=Map3D"></script>
+        <script>
+            var map = new AMap.Map('container', {
+                resizeEnable: true,
+                center: [104.072228,30.663467],
+                // features: ['road', 'bg'],
+                zoom: 13
+            });
+        
+            var satellite = new AMap.TileLayer.Satellite({
+                map: map,
+            });
+        
+            //绑定按钮事件
+           
+            function showLayer() {
+                satellite.show();
+            }
+        
+            function hideLayer() {
+                satellite.hide();
+            }
+        </script>
+</body>
+</html>
